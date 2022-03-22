@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable indent */
+/* eslint-disable linebreak-style */
 /* eslint-disable eol-last */
 /* eslint-disable linebreak-style */
 /* eslint-disable quotes */
@@ -9,7 +11,7 @@ const {
   getNoteByIdHandler,
   editNoteByIdHandler,
   deleteNoteByIdHandler,
-} = require('./handler');
+} = require("./handler");
 
 const routes = [
   {
@@ -18,30 +20,25 @@ const routes = [
     handler: addNoteHandler,
   },
   {
-    method: 'GET',
-    path: '/notes',
-    handler: getAllNotesHandler,
-  },
-  {
-    method: 'GET',
-    path: '/notes/{id}',
-    handler: () => {},
-  },
-  {
-    method: 'GET',
-    path: '/notes/{id}',
-    handler: getNoteByIdHandler,
-  },
-  {
-    method: 'PUT',
-    path: '/notes/{id}',
-    handler: editNoteByIdHandler,
-  },
-  {
-    method: 'DELETE',
-    path: '/notes/{id}',
-    handler: deleteNoteByIdHandler,
-  },
+      method: 'GET',
+      path: '/notes',
+      handler: getAllNotesHandler,
+    },
+    {
+      method: 'GET',
+      path: '/notes/{id}',
+      handler: getNoteByIdHandler,
+    },
+    {
+      method: 'PUT',
+      path: '/notes/{id}',
+      handler: editNoteByIdHandler,
+    },
+    {
+      method: 'DELETE',
+      path: '/notes/{id}',
+      handler: deleteNoteByIdHandler,
+    },
 ];
 
 module.exports = routes;
